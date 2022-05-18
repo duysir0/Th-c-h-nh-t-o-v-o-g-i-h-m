@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tạo và gọi hàm</title>
+</head>
+<body>
+
+</body>
+<script>
+    //Hàm confirm() trả 1 hộp hội thoại có 2 option là 'Ok' và 'Cancel',
+    //chọn Ok trả về 'true' và ngược lại 'false'
+    //trong ngoặc tròn là văn bản
+    let confirmAnswer = confirm("Shall we play a game?");
+    let theAnswer = processConfirm(confirmAnswer); //kết quả của funct processConfirm (với biến số là confirmAnswer)
+    var result = ""
+    //gọi funct tên processConfirm, với biến số là confirmAnswer
+    function processConfirm(answer) {
+        //Vì biến số (answer) nhận giá trị từ (confirmAnswer)
+        //mà (confirmAnswer) chỉ trả về: 'true'(khi ấn OK) và 'false' (khi ấn Cancel)
+        //Nên (answer) ở đây nghiễm nhiên = 'true' hoặc 'false'
+
+        if (answer) {   //nếu là 'true', tức có sự tồn tại của (answer)
+            result = "Excellent. We'll play a nice game of chess.";
+        } else {        //ngầm hiểu 'false', không có sự tồn tại của (answer)
+            result = "Maybe later then.";
+        }
+        return result;
+    }
+    alert(theAnswer);
+</script>
+</html>
